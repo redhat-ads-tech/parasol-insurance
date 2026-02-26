@@ -94,16 +94,16 @@ class ClaimResourceTests {
 
 	private static Claim createClaim() {
 		var claim = new Claim();
-		claim.claimNumber = "001";
-		claim.category = "Auto";
-		claim.policyNumber = "123";
-		claim.clientName = "client";
-		claim.subject = "collision";
-		claim.body = "body";
-		claim.summary = "Car was damaged in accident";
-		claim.location = "driveway";
-		claim.time = "afternoon";
-		claim.sentiment = "Very bad";
+		claim.setClaimNumber("001");
+		claim.setCategory("Auto");
+		claim.setPolicyNumber("123");
+		claim.setClientName("client");
+		claim.setSubject("collision");
+		claim.setBody("body");
+		claim.setSummary("Car was damaged in accident");
+		claim.setLocation("driveway");
+		claim.setTime("afternoon");
+		claim.setSentiment("Very bad");
 
 		return claim;
 	}

@@ -21,7 +21,7 @@ import io.quarkiverse.quinoa.testing.QuinoaTestProfiles;
 @QuarkusTest
 @TestProfile(QuinoaTestProfiles.Enable.class)
 @WithPlaywright
-public class ClaimsDetailPageTests extends PlaywrightTests {
+class ClaimsDetailPageTests extends PlaywrightTests {
 	@Test
 	void pageLoads() {
 		var claim = Claim.<Claim>findAll().firstResultOptional().orElseThrow(() -> new IllegalArgumentException("Can not find a claim in the database to use for tests"));
@@ -30,13 +30,13 @@ public class ClaimsDetailPageTests extends PlaywrightTests {
 		PlaywrightAssertions.assertThat(page)
 			.hasTitle("Claim Detail");
 
-		PlaywrightAssertions.assertThat(page.getByText(claim.claimNumber))
+		PlaywrightAssertions.assertThat(page.getByText(claim.getClaimNumber()))
 			.isVisible();
 
-		PlaywrightAssertions.assertThat(page.getByText(claim.summary))
+		PlaywrightAssertions.assertThat(page.getByText(claim.getSummary()))
 			.isVisible();
 
-		PlaywrightAssertions.assertThat(page.getByText(claim.sentiment))
+		PlaywrightAssertions.assertThat(page.getByText(claim.getSentiment()))
 			.isVisible();
 
 		var openChatButton = page.getByLabel("OpenChat");

@@ -20,7 +20,7 @@ import io.quarkiverse.quinoa.testing.QuinoaTestProfiles;
 @QuarkusTest
 @TestProfile(QuinoaTestProfiles.Enable.class)
 @WithPlaywright
-public class ClaimsListPageTests extends PlaywrightTests {
+class ClaimsListPageTests extends PlaywrightTests {
 	private static final int NB_CLAIMS = 6;
 
 	@Test
@@ -66,29 +66,29 @@ public class ClaimsListPageTests extends PlaywrightTests {
 				l -> l.getByRole(AriaRole.LINK).getAttribute("href")
 			)
 			.containsExactly(
-				claim.claimNumber,
+				claim.getClaimNumber(),
 				"/ClaimDetail/%d".formatted(claim.id)
 			);
 
 		assertThat(firstRow.get(1))
 			.isNotNull()
 			.extracting(Locator::textContent)
-			.isEqualTo(claim.category);
+			.isEqualTo(claim.getCategory());
 
 		assertThat(firstRow.get(2))
 			.isNotNull()
 			.extracting(Locator::textContent)
-			.isEqualTo(claim.clientName);
+			.isEqualTo(claim.getClientName());
 
 		assertThat(firstRow.get(3))
 			.isNotNull()
 			.extracting(Locator::textContent)
-			.isEqualTo(claim.policyNumber);
+			.isEqualTo(claim.getPolicyNumber());
 
 		assertThat(firstRow.get(4))
 			.isNotNull()
 			.extracting(Locator::textContent)
-			.isEqualTo(claim.status);
+			.isEqualTo(claim.getStatus());
 	}
 
 	private List<Locator> getTableBodyRows(Locator table) {

@@ -12,6 +12,7 @@ import jakarta.ws.rs.core.MediaType;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Path("/api/db/claims")
+@SuppressWarnings("java:S3252") // Panache requires static access via entity subclass, not PanacheEntityBase
 public class ClaimResource {
 
     @GET
