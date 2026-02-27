@@ -3,12 +3,3 @@ metadata:
   name: parasol-insurance
 parent:
   uri: https://{{ gitlab_host }}/rhdh/devfiles/-/raw/main/devfile.yaml
-components:
-  - name: development-tooling
-    container:
-      endpoints:
-        - name: quarkus-dev
-          targetPort: 8005
-          exposure: public
-          secure: false
-          protocol: https
