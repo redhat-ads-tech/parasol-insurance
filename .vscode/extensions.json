@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "redhat.java",
+    "continue.continue",
+    "redhat.vscode-yaml",
+    "redhat.vscode-quarkus"
+  ]
+}
