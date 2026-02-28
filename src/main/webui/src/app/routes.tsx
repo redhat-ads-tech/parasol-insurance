@@ -64,7 +64,7 @@ const routes: AppRouteConfig[] = [
   },
   {
     component: Empty,
-    label: 'CLAIMS',
+    label: 'Coverages',
     path: '#',
     title: 'Coverages'
   },
