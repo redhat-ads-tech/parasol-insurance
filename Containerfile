@@ -1,4 +1,7 @@
 FROM registry.access.redhat.com/ubi9/openjdk-21:1.20 AS builder
+USER root
+RUN microdnf install -y gzip && microdnf clean all
+USER 185
 COPY --chown=185 . /code
 WORKDIR /code
 RUN ./mvnw package -DskipTests
