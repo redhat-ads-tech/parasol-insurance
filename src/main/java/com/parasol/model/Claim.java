@@ -2,39 +2,48 @@ package com.parasol.model;
 
 import java.util.List;
 
-public class Claim {
+import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Entity;
+
+@Entity
+public class Claim extends PanacheEntity {
+
+    @Column(name = "claim_number")
     public String claimNumber;
+
     public String category;
+
+    @Column(name = "client_name")
     public String clientName;
+
+    @Column(name = "client_email")
     public String clientEmail;
+
+    @Column(name = "client_phone")
     public String clientPhone;
+
+    @Column(name = "policy_number")
     public String policyNumber;
+
     public String status;
+
+    @Column(name = "date_of_event")
     public String dateOfEvent;
+
+    @Column(name = "location_of_event")
     public String locationOfEvent;
+
+    @Column(length = 4000)
     public String summary;
+
+    @Column(name = "estimated_amount")
     public String estimatedAmount;
+
     public String adjuster;
+
+    @Convert(converter = StringListConverter.class)
+    @Column(length = 1000)
     public List<String> images;
-
-    public Claim() {}
-
-    public Claim(String claimNumber, String category, String clientName, String clientEmail,
-                 String clientPhone, String policyNumber, String status, String dateOfEvent,
-                 String locationOfEvent, String summary, String estimatedAmount, String adjuster,
-                 List<String> images) {
-        this.claimNumber = claimNumber;
-        this.category = category;
-        this.clientName = clientName;
-        this.clientEmail = clientEmail;
-        this.clientPhone = clientPhone;
-        this.policyNumber = policyNumber;
-        this.status = status;
-        this.dateOfEvent = dateOfEvent;
-        this.locationOfEvent = locationOfEvent;
-        this.summary = summary;
-        this.estimatedAmount = estimatedAmount;
-        this.adjuster = adjuster;
-        this.images = images;
-    }
 }
