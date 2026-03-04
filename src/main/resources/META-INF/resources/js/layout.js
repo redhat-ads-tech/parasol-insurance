@@ -8,6 +8,7 @@ function initLayout(activePage) {
         { id: 'annuities', label: 'Annuities', href: '/annuities.html' },
         { id: 'subscriptions', label: 'Subscriptions', href: '/subscriptions.html' },
         { id: 'reports', label: 'Reports', href: '/reports.html' },
+        { id: 'inbox', label: 'Inbox', href: '/inbox.html' },
     ];
 
     const bottomNavItems = [

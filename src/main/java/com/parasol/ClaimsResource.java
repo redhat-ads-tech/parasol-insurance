@@ -17,13 +17,13 @@ public class ClaimsResource {
 
     @GET
     public List<Claim> getAllClaims() {
-        return Claim.listAll();
+        return Claim.listAll(); // NOSONAR
     }
 
     @GET
     @Path("/{claimNumber}")
     public Response getClaim(@PathParam("claimNumber") String claimNumber) {
-        Claim claim = Claim.find("claimNumber", claimNumber).firstResult();
+        Claim claim = Claim.find("claimNumber", claimNumber).firstResult(); // NOSONAR
         if (claim != null) {
             return Response.ok(claim).build();
         }

@@ -688,3 +688,139 @@ a:hover { text-decoration: underline; }
     color: #777;
     font-size: 14px;
 }
+
+/* ===== Inbox ===== */
+.dept-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.dept-badge.retention {
+    color: #0066cc;
+    background: #e8f0fe;
+    border: 1px solid #0066cc;
+}
+
+.dept-badge.acquisition {
+    color: #3e8635;
+    background: #e6f4ea;
+    border: 1px solid #3e8635;
+}
+
+.dept-badge.claims {
+    color: #c9190b;
+    background: #fce8e8;
+    border: 1px solid #c9190b;
+}
+
+.dept-badge.review-required {
+    color: #c58c00;
+    background: #fdf4e0;
+    border: 1px solid #c58c00;
+}
+
+.warning-icon {
+    margin-right: 4px;
+    font-size: 14px;
+}
+
+.inbox-count {
+    font-weight: 400;
+    color: #777;
+}
+
+.claims-table tr.clickable-row {
+    cursor: pointer;
+}
+
+.email-detail-row td {
+    padding: 0 !important;
+    border-bottom: 1px solid #eee;
+}
+
+.email-detail {
+    padding: 20px 24px;
+    background: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+.email-detail-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px 16px;
+    margin-bottom: 16px;
+    font-size: 13px;
+}
+
+.email-detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.email-detail-value {
+    color: #333;
+}
+
+.email-detail-body {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 12px;
+    white-space: pre-wrap;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    color: #555;
+    font-size: 12px;
+    cursor: default;
+    position: relative;
+}
+
+.info-icon:hover {
+    background: #e0e0e0;
+}
+
+.info-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 200;
+    pointer-events: none;
+}
+
+.info-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+}
+
+.info-icon:hover .info-tooltip {
+    display: block;
+}

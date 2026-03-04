@@ -13,7 +13,9 @@ public class Claim extends PanacheEntity {
     @Column(name = "claim_number")
     public String claimNumber;
 
-    public String category;
+    private String category;
+    public String getCategory() { return category; }
+    public void setCategory(String category) { this.category = category; }
 
     @Column(name = "client_name")
     public String clientName;
@@ -27,7 +29,9 @@ public class Claim extends PanacheEntity {
     @Column(name = "policy_number")
     public String policyNumber;
 
-    public String status;
+    private String status;
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
 
     @Column(name = "date_of_event")
     public String dateOfEvent;
@@ -41,7 +45,9 @@ public class Claim extends PanacheEntity {
     @Column(name = "estimated_amount")
     public String estimatedAmount;
 
-    public String adjuster;
+    private String adjuster;
+    public String getAdjuster() { return adjuster; }
+    public void setAdjuster(String adjuster) { this.adjuster = adjuster; }
 
     @Convert(converter = StringListConverter.class)
     @Column(length = 1000)
