@@ -1,4 +1,4 @@
-By default the app will assume there is a chat model on https://localhost:8000/v1 that exposes an OpenAI endpoint.
+By default the app will assume there is a chat model on https://localhost:8000/v1 that exposes an OpenAI endpoint!
 
 # Using Ollama
 
