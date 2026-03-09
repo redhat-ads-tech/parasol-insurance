@@ -2,4 +2,4 @@ schemaVersion: 2.2.0
 metadata:
   name: parasol-insurance
 parent:
-  uri: https://gitlab-gitlab.apps.cluster-j6mjm.dynamic.redhatworkshops.io/rhdh/devfiles/-/raw/main/devfile.yaml
+  uri: https://{{ gitlab_host }}/rhdh/devfiles/-/raw/main/devfile.yaml
