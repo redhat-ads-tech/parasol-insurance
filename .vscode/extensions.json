@@ -1,7 +1,9 @@
 {
   "recommendations": [
     "redhat.java",
+    "anthropic.claude-code",
     "continue.continue",
+    "RooVeterinaryInc.roo-cline",
     "redhat.vscode-yaml",
     "redhat.vscode-quarkus",
     "redhat.fabric8-analytics"
