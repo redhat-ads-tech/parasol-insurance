@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "redhat.java",
-    "anthropic.claude-code",
     "continue.continue",
     "RooVeterinaryInc.roo-cline",
     "redhat.vscode-yaml",
